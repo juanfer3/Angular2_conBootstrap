@@ -1,0 +1,28 @@
+<div class="row">
+    <button (click)="btnClick()" class="btn btn-primary"> Click Me!</button>
+    <div>
+        <input #campoInput
+        (keyup)="OnKeyUp($event)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)"
+        type="text" class="form-control">
+        <p> valor: actual {{valorActual}}</p>
+        <p> valor: actual {{guardarValor}}</p>
+        
+        <span
+           (mouseover)="isMyOver()"
+           (mouseout)="isMyOver()"
+           [class.highligh]="isMouseOver"
+           >
+            hola
+        </span>
+        
+        <h3>Tow-way</h3>
+        <input type="text" class="form-control"
+        [value]="nome"
+        >
+        
+        
+    </div>
+</div>
+
